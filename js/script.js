@@ -2,7 +2,6 @@
 // Дано: номер телефона из 10 цифр  - формат число (пример - 7923456223)
 // Найти: строку в формате (***) - *** - ** - ** (пример - (792) - 345 - 62 - 23)
 
-
 function telNumb(numb) {
     return String(numb).split('').reduce((acc, item, index) => {
         if (index === 1) {
@@ -19,6 +18,7 @@ function telNumb(numb) {
 }
 
 console.log(telNumb(79234562233));
+
 //Вариант №2
 function formatPhoneNumber(phoneNumber) {
     const cleaned = phoneNumber.toString()
@@ -29,8 +29,6 @@ function formatPhoneNumber(phoneNumber) {
 
     return cleaned.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, '+($1)-$2-$3-$4');
 }
-
-
 
 console.log(formatPhoneNumber("9123456789"));
 
