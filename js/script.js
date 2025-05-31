@@ -1,3 +1,19 @@
+//Вариант №1
+function telNumb(numb) {
+    return String(numb).split('').reduce((acc, item, index) => {
+        if (index === 1) {
+            acc += '-(' + item
+        } else if (index === 3) {
+            acc += item + ')-'
+        } else if (index === 6 || index === 8) {
+            acc += item + '-'
+        } else {
+            acc += item
+        }
+        return acc
+    }, '')
+}
+//Вариант №1
 function formatPhoneNumber(phoneNumber) {
     const cleaned = phoneNumber.toString()
 
@@ -10,3 +26,5 @@ function formatPhoneNumber(phoneNumber) {
 
 console.log(formatPhoneNumber("9123456789"));
 
+
+console.log(telNumb(79234562233));
