@@ -32,5 +32,6 @@ function formatPhoneNumber(phoneNumber) {
 
 console.log(formatPhoneNumber("9123456789"));
 console.log(formatPhoneNumber("1234567800"));
+console.log(formatPhoneNumber("9876543210"));
 
 
